@@ -7,7 +7,7 @@
   "scripts": {
     "start": "ionic serve",
     "clean": "ionic-app-scripts clean",
-    "build": "ionic-app-scripts build",
+    "build": "ionic build",
     "lint": "ionic-app-scripts lint"
   },
   "dependencies": {
