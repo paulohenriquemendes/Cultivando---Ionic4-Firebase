@@ -3,16 +3,24 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Cultivos</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <div *ngIf="culltivosDb.length > 0; else estadoVazio">
+    <ion-card *ngFor="let culltivo of culltivosDb" (click)="btnItem(culltivo)">
+      <ion-card-content>
+        <ion-card-title>
+          {{culltivo.nome}} <span class="empresa">({{culltivo.clima}})</span>
+        </ion-card-title>
+        <p>
+          {{culltivo.solo}} | {{culltivo.irrigacao}} | {{culltivo.colheita}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <ng-template #estadoVazio>
+    <h2>Você ainda não tem culltivos. Utilize o menu para cadastrar o seu primeiro culltivo.</h2>
+  </ng-template>
 </ion-content>

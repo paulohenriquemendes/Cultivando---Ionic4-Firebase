@@ -1,0 +1,26 @@
+<!-- Generated template for the ContatoFormComponent component -->
+<div>
+  <form novalidate [formGroup]="cultivoForm" (ngSubmit)="cadastraCultivo()">
+    <ion-list>
+      <ion-item>
+        <ion-input type="text" placeholder="Nome" formControlName="nome"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Clima" formControlName="clima"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Solo" formControlName="solo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Irrigação" formControlName="irrigacao"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Detalhes do plantio" formControlName="detalhePlantio"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="number" placeholder="Dias para a colheita" formControlName="colheita"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button type="submit" ion-button block [disabled]="cultivoForm.invalid">Salvar</button>
+  </form>
+</div>

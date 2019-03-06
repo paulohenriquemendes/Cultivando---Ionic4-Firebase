@@ -1,0 +1,51 @@
+<!--
+  Generated template for the ItemPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{cultivo.nome}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item-group>
+      <ion-item-divider>
+        <ion-label>CLIMA:</ion-label>
+      </ion-item-divider>
+      <ion-item text-wrap>
+        <ion-label>{{cultivo.clima}}</ion-label>
+      </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+      <ion-item-divider>
+        <ion-label>IRRIGAÇÃO:</ion-label>
+      </ion-item-divider>
+      <ion-item text-wrap>
+        <ion-label>{{cultivo.irrigacao}}</ion-label>
+      </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+      <ion-item-divider>
+        <ion-label>DETALHES DO PLANTIO:</ion-label>
+      </ion-item-divider>
+      <ion-item text-wrap>
+        <ion-label>{{cultivo.detalhePlantio}}</ion-label>
+      </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+      <ion-item-divider>
+        <ion-label>COLHEITA (DIAS):</ion-label>
+      </ion-item-divider>
+      <ion-item text-wrap>
+        <ion-label>{{cultivo.colheita}}</ion-label>
+      </ion-item>
+  </ion-item-group>
+
+</ion-content>
